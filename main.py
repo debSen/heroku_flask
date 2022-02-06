@@ -1,4 +1,4 @@
-import flask
+import flask. render_template
 import os
 from flask import send_from_directory
 
@@ -12,7 +12,7 @@ app = flask.Flask(__name__)
 @app.route('/')
 @app.route('/home')
 def home():
-    return "Hello World"
+    return render_template("home.html")
 
 if __name__ == "__main__":
     app.secret_key = 'ItIsASecret'
